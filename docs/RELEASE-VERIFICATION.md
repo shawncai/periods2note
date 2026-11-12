@@ -36,3 +36,13 @@ python3 scripts/verify-public.py /path/to/periods2note-1.1.0-release.apk
 ```
 
 脚本检查路径和 APK 数据边界；截图、示例和源代码内容仍需人工审查。
+
+## 发布后核对
+
+源码已推送到 `main`，发布代码标签为 `v1.1.0`。远端 README 和三张截图与本地文件一致，源码树不含 JSON 或本地交付目录。已从 [GitHub Release](https://github.com/shawncai/periods2note/releases/tag/v1.1.0) 重新下载 APK 与校验文件，SHA-256 一致：
+
+```text
+7f2a6840d03b53b857bfaa85cf646368483f70669806133005252597f7035479
+```
+
+任务测试包、ADB 服务和临时源码/下载目录均已清理；原有手机应用保留。发布签名私钥只保存在维护者本机，不随仓库或 Release 分发。
